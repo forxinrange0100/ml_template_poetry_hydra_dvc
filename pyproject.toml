@@ -27,5 +27,11 @@ build-backend = "poetry.core.masonry.api"
 [dependency-groups]
 dev = [
     "hydra-colorlog (>=1.2.0,<2.0.0)",
-    "dvc[gs] (>=3.65.0,<4.0.0)"
+    "dvc[gs] (>=3.65.0,<4.0.0)",
+    "mkdocs (>=1.6.1,<2.0.0)"
 ]
+
+
+[tool.poetry.scripts]
+run-pipeline = "olist_ml.main:main"
+prepare-data = "olist_ml.data:main"
